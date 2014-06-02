@@ -1,0 +1,26 @@
+#!/usr/bin/env node
+var util = require('util'),
+    twitter = require('twitter');
+
+var twit = new twitter({
+    consumer_key: '2wN3eisxfuyZ6xeNd339d5W33',
+    consumer_secret: 'AjhUHJhvNWBLpgOolVdG2QkE6gNfW8o6vP8pt2A4AfmWmt5Yza',
+    access_token_key: '2539494444-7vnoXgqr7baY34nzpsjOV4ol62LaCSPwCb4T2oE',
+    access_token_secret: 'CdHl18SZzUGkXGIVQqWbeU86lhYqxsXvWh67nd9z9zODf'
+});
+
+twit.verifyCredentials(function(data) {
+    console.log(util.inspect(data));
+});
+
+var date = new Date();
+
+twit.updateStatus('Test tweet from node-twitter/' + twitter.VERSION + " " + (new Date()).toString(),
+                  function(data) {
+                      console.log(util.inspect(data));
+                  });
+
+twit.get('/statuses/mentions_timeline.json', {include_entities:true}, function(data) {
+    console.log(util.inspect(data));
+});
+

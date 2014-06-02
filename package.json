@@ -1,0 +1,27 @@
+{
+  "name": "answer-talker",
+  "version": "0.0.1",
+  "description": "This is answer talker",
+  "main": "app.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lewuathe/answer-talker.git"
+  },
+  "keywords": [
+    "example",
+    "heroku"
+  ],
+  "author": "jane-doe",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lewuathe/answer-talker/issues"
+  },
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "express": "^4.4.0",
+    "twitter": "^0.2.9"
+  }
+}
