@@ -3,10 +3,10 @@ var util = require('util'),
     twitter = require('twitter');
 
 var twit = new twitter({
-    consumer_key: '2wN3eisxfuyZ6xeNd339d5W33',
-    consumer_secret: 'AjhUHJhvNWBLpgOolVdG2QkE6gNfW8o6vP8pt2A4AfmWmt5Yza',
-    access_token_key: '2539494444-7vnoXgqr7baY34nzpsjOV4ol62LaCSPwCb4T2oE',
-    access_token_secret: 'CdHl18SZzUGkXGIVQqWbeU86lhYqxsXvWh67nd9z9zODf'
+    consumer_key: process.env["NODE_CONSUMER_KEY"],
+    consumer_secret: process.env["NODE_CONSUMER_SECRET"],
+    access_token_key: process.env["NODE_ACCESS_TOKEN_KEY"],
+    access_token_secret: process.env["NODE_ACCESS_TOKEN_SECRET"]
 });
 
 twit.verifyCredentials(function(data) {
