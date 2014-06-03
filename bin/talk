@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+var routine = require('../lib/routine.js');
+
+routine();
